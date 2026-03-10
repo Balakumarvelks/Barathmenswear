@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import api from '../services/api';
 import './FindMySize.css';
@@ -19,6 +19,15 @@ function FindMySize({ isOpen, onClose, onSizeSelect, productSizes = [] }) {
   const fileInputRef = useRef(null);
   const webcamRef = useRef(null);
   const [isWebcamActive, setIsWebcamActive] = useState(false);
+  const [webcamStream, setWebcamStream] = useState(null);
+
+  // Attach stream to video element once both are available
+  useEffect(() => {
+    if (webcamStream && webcamRef.current) {
+      webcamRef.current.srcObject = webcamStream;
+      webcamRef.current.play().catch(() => {});
+    }
+  }, [webcamStream, isWebcamActive]);
 
   const resetForm = useCallback(() => {
     setStep(1);
@@ -29,10 +38,11 @@ function FindMySize({ isOpen, onClose, onSizeSelect, productSizes = [] }) {
     setImagePreview(null);
     setResult(null);
     setIsWebcamActive(false);
-    if (webcamRef.current && webcamRef.current.srcObject) {
-      webcamRef.current.srcObject.getTracks().forEach(track => track.stop());
+    if (webcamStream) {
+      webcamStream.getTracks().forEach(track => track.stop());
+      setWebcamStream(null);
     }
-  }, []);
+  }, [webcamStream]);
 
   const handleClose = () => {
     resetForm();
@@ -60,10 +70,8 @@ function FindMySize({ isOpen, onClose, onSizeSelect, productSizes = [] }) {
       const stream = await navigator.mediaDevices.getUserMedia({ 
         video: { facingMode: 'user', width: 640, height: 480 } 
       });
-      if (webcamRef.current) {
-        webcamRef.current.srcObject = stream;
-        setIsWebcamActive(true);
-      }
+      setWebcamStream(stream);
+      setIsWebcamActive(true);
     } catch (error) {
       toast.error('Unable to access camera. Please allow camera permissions.');
       console.error('Webcam error:', error);
@@ -83,8 +91,9 @@ function FindMySize({ isOpen, onClose, onSizeSelect, productSizes = [] }) {
         setImagePreview(canvas.toDataURL('image/jpeg'));
         
         // Stop webcam
-        if (webcamRef.current.srcObject) {
-          webcamRef.current.srcObject.getTracks().forEach(track => track.stop());
+        if (webcamStream) {
+          webcamStream.getTracks().forEach(track => track.stop());
+          setWebcamStream(null);
         }
         setIsWebcamActive(false);
       }, 'image/jpeg', 0.8);
@@ -144,7 +153,7 @@ function FindMySize({ isOpen, onClose, onSizeSelect, productSizes = [] }) {
       formData.append('sessionId', sessionId);
 
       const uploadResponse = await api.post('/size/upload-image', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
+        headers: { 'Content-Type': undefined }
       });
 
       if (uploadResponse.data.success) {
