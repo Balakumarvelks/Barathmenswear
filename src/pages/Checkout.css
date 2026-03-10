@@ -1,0 +1,1201 @@
+.checkout-container {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding: 20px;
+  min-height: 60vh;
+}
+
+.checkout-container h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.checkout-content {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.checkout-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.addresses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.address-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border: 2px solid #eee;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.address-option input[type="radio"] {
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.address-option:hover {
+  border-color: #007bff;
+  background: #f9f9f9;
+}
+
+.address-content {
+  flex: 1;
+}
+
+.address-name {
+  margin: 0 0 4px;
+  font-weight: 600;
+  color: #333;
+}
+
+.address-text {
+  margin: 0 0 4px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.address-phone {
+  margin: 0;
+  color: #999;
+  font-size: 0.85rem;
+}
+
+.address-form {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.address-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-options label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 2px solid #eee;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.payment-options input[type="radio"] {
+  cursor: pointer;
+}
+
+.payment-options label:hover {
+  border-color: #007bff;
+  background: #f9f9f9;
+}
+
+/* Stripe Card Element Styling */
+.stripe-card-element {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.stripe-card-element label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+.stripe-card-element .StripeElement {
+  padding: 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+
+.stripe-card-element .StripeElement--focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.stripe-card-element .StripeElement--invalid {
+  border-color: #dc3545;
+}
+
+.order-summary {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.summary-items {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.summary-row.total {
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+  padding: 12px 0;
+  margin: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.summary-row.coupon-discount span:last-child {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+/* Available Coupons Section */
+.available-coupons-section {
+  margin: 16px 0;
+  padding: 16px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+  border-radius: 10px;
+}
+
+.view-coupons-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-coupons-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.coupons-list {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkout-coupon-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.checkout-coupon-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.coupon-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.coupon-discount-badge {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: inline-block;
+  width: fit-content;
+}
+
+.coupon-code-text {
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.coupon-min-order {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.apply-coupon-btn {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.apply-coupon-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(17, 153, 142, 0.3);
+}
+
+.apply-coupon-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.applied-coupon-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  color: #155724;
+  border-radius: 8px;
+  font-weight: 600;
+  margin: 12px 0;
+}
+
+.applied-coupon-badge svg {
+  color: #27ae60;
+}
+
+.btn-block {
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* Coupon Input Section */
+.coupon-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coupon-hint {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.coupon-input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.coupon-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: border-color 0.3s ease;
+}
+
+.coupon-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.coupon-input:disabled {
+  background: #f5f5f5;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.btn-apply-coupon {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-apply-coupon:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-apply-coupon:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.btn-remove-coupon {
+  padding: 10px 20px;
+  background: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-remove-coupon:hover {
+  background: #e84141;
+}
+
+.coupon-applied {
+  margin-top: 10px;
+}
+
+.coupon-success {
+  color: #27ae60;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.coupon-discount {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+/* View Available Coupons */
+.btn-view-coupons {
+  margin-top: 12px;
+  background: none;
+  border: 1px dashed #667eea;
+  color: #667eea;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btn-view-coupons:hover {
+  background: #f0f0ff;
+}
+
+.available-coupons-list {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.no-coupons {
+  text-align: center;
+  color: #999;
+  padding: 16px;
+}
+
+.available-coupon-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.available-coupon-card:hover {
+  border-color: #667eea;
+  background: #f5f5ff;
+}
+
+.available-coupon-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.available-coupon-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.available-coupon-code {
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #333;
+  letter-spacing: 1px;
+  background: #fff;
+  border: 1px dashed #667eea;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.available-coupon-badge {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.available-coupon-desc {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 2px 0;
+}
+
+.available-coupon-details {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.btn-use-coupon {
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-use-coupon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.4);
+}
+
+/* Place Order Button */
+.btn-place-order {
+  display: block;
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(17, 153, 142, 0.4);
+  margin-top: 20px;
+}
+
+.btn-place-order:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(17, 153, 142, 0.5);
+}
+
+.btn-place-order:disabled {
+  background: linear-gradient(135deg, #bdc3c7 0%, #95a5a6 100%);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-place-order:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Add New Address Button */
+.btn-add-address {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-add-address:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.btn-add-address:active {
+  transform: translateY(0);
+}
+
+/* Save Address Button */
+.btn-save-address {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(17, 153, 142, 0.3);
+}
+
+.btn-save-address:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(17, 153, 142, 0.4);
+}
+
+/* Cancel Button */
+.btn-cancel {
+  padding: 12px 24px;
+  background: white;
+  color: #666;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background: #f5f5f5;
+  border-color: #999;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .checkout-content {
+    grid-template-columns: 1fr;
+  }
+
+  .order-summary {
+    position: static;
+  }
+}
+
+/* ========== Payment Method Tabs ========== */
+.payment-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.payment-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.payment-tab:hover {
+  border-color: #1a237e;
+  background: #f5f5ff;
+}
+
+.payment-tab.active {
+  border-color: #1a237e;
+  background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+  color: white;
+}
+
+.payment-tab svg {
+  font-size: 18px;
+}
+
+/* ========== Payment Info Box ========== */
+.payment-info-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  border-radius: 10px;
+  border: 1px solid #a5d6a7;
+}
+
+.payment-info-box .info-icon {
+  font-size: 32px;
+  color: #2e7d32;
+}
+
+.payment-info-box h4 {
+  margin: 0;
+  color: #2e7d32;
+  font-size: 1rem;
+}
+
+.payment-info-box p {
+  margin: 5px 0 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* ========== UPI Payment Section ========== */
+.upi-payment-section {
+  margin-top: 15px;
+}
+
+.upi-options {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.upi-option {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upi-option:hover {
+  border-color: #1a237e;
+  background: #f5f5ff;
+}
+
+.upi-option.active {
+  border-color: #1a237e;
+  background: #e8eaf6;
+}
+
+.upi-option svg {
+  color: #1a237e;
+}
+
+/* QR Code Section */
+.qr-code-section {
+  text-align: center;
+}
+
+.qr-code-box {
+  display: inline-block;
+  padding: 25px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.qr-code-placeholder {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.qr-instruction {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0 0 10px;
+}
+
+.qr-amount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1a237e;
+  margin: 0 0 10px;
+}
+
+.upi-id-display {
+  background: #e8eaf6;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-family: monospace;
+  color: #1a237e;
+  font-weight: 600;
+}
+
+.upi-apps-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.upi-app-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  background: white;
+  min-width: 80px;
+}
+
+.upi-app-icon span {
+  font-size: 24px;
+}
+
+.upi-app-icon small {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+/* UPI ID Input Section */
+.upi-id-section {
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.upi-id-input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.upi-id-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.upi-id-input:focus {
+  outline: none;
+  border-color: #1a237e;
+}
+
+.verify-upi-btn {
+  padding: 12px 25px;
+  background: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.verify-upi-btn:hover {
+  background: #3949ab;
+}
+
+.verify-upi-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.popular-upi-apps p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.upi-apps-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.upi-app-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-size: 0.85rem;
+}
+
+.upi-app-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== Card Payment Section ========== */
+.card-payment-section {
+  margin-top: 15px;
+}
+
+.card-brands {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.card-brand {
+  padding: 8px 15px;
+  background: #f5f5f5;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.stripe-redirect-info {
+  margin: 20px 0;
+}
+
+.stripe-info-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9ff 0%, #eef1ff 100%);
+  border: 2px solid #6772e5;
+  border-radius: 12px;
+}
+
+.stripe-info-box h4 {
+  margin: 0 0 5px;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.stripe-info-box p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.secure-payment-badge {
+  margin-top: 15px;
+  padding: 12px;
+  background: #e8f5e9;
+  border-radius: 6px;
+  color: #2e7d32;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* ========== Net Banking Section ========== */
+.netbanking-section {
+  margin-top: 15px;
+}
+
+.netbanking-section h4 {
+  margin: 0 0 15px;
+  color: #333;
+}
+
+.banks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.bank-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bank-option:hover {
+  border-color: #1a237e;
+  background: #f5f5ff;
+}
+
+.bank-option.selected {
+  border-color: #1a237e;
+  background: #e8eaf6;
+}
+
+.bank-option input[type="radio"] {
+  display: none;
+}
+
+.bank-logo {
+  font-size: 28px;
+}
+
+.bank-name {
+  font-size: 0.75rem;
+  color: #555;
+  text-align: center;
+}
+
+.other-banks {
+  margin-top: 15px;
+}
+
+.bank-select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+}
+
+.bank-select:focus {
+  outline: none;
+  border-color: #1a237e;
+}
+
+/* ========== Wallet Section ========== */
+.wallet-section {
+  margin-top: 15px;
+}
+
+.wallet-section h4 {
+  margin: 0 0 15px;
+  color: #333;
+}
+
+.wallets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.wallet-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wallet-option:hover {
+  border-color: #1a237e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.wallet-option.selected {
+  background: #f5f5ff;
+}
+
+.wallet-option input[type="radio"] {
+  display: none;
+}
+
+.wallet-icon {
+  font-size: 32px;
+}
+
+.wallet-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.wallet-balance-check {
+  padding: 12px;
+  background: #fff3e0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.wallet-balance-check p {
+  margin: 0;
+  color: #e65100;
+  font-size: 0.85rem;
+}
+
+/* ========== Responsive Styles ========== */
+@media (max-width: 768px) {
+  .payment-tabs {
+    flex-direction: column;
+  }
+
+  .payment-tab {
+    justify-content: center;
+  }
+
+  .upi-options {
+    flex-direction: column;
+  }
+
+  .banks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wallets-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .upi-id-input-group {
+    flex-direction: column;
+  }
+
+  .upi-apps-list {
+    justify-content: center;
+  }
+}
+
+/* Updated Payment Options Styling */
+.payment-option {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+  margin-bottom: 12px;
+}
+
+.payment-option:hover {
+  border-color: #007bff;
+  background: #f9f9f9;
+}
+
+.payment-option.selected {
+  border-color: #007bff;
+  background: #f0f7ff;
+}
+
+.payment-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.payment-header input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #007bff;
+}
+
+.payment-header .info-icon {
+  font-size: 24px;
+  color: #007bff;
+}
+
+.payment-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.payment-desc {
+  margin: 0 0 0 42px;
+  font-size: 0.9rem;
+  color: #666;
+}

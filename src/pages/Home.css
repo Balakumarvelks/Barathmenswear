@@ -1,0 +1,494 @@
+.home-container {
+  min-height: 100vh;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #1a237e 0%, #3949ab 50%, #5c6bc0 100%);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+  color: #fff;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tagline {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 0.8rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  opacity: 1;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-btn.primary {
+  background: #fff;
+  color: #1a237e;
+}
+
+.hero-btn.primary:hover {
+  background: #e8eaf6;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn.secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.hero-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+.features-section {
+  padding: 2.5rem 2rem;
+  background: #f8f9fa;
+}
+
+.features-section h2,
+.categories-section h2 {
+  text-align: center;
+  color: #1a237e;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #666;
+}
+
+.categories-section {
+  padding: 2.5rem 2rem;
+  background: #fff;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  display: block;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(26, 35, 126, 0.3);
+}
+
+.category-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.category-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-image img {
+  transform: scale(1.1);
+}
+
+.category-icon-placeholder {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: white;
+}
+
+.category-name {
+  display: block;
+  padding: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a237e;
+  background: #fff;
+}
+
+/* Offers & Coupons Section */
+.offers-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  text-align: center;
+}
+
+.offers-section h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.offers-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.coupons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.coupon-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.coupon-card:hover {
+  transform: translateY(-8px);
+}
+
+.coupon-card::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+}
+
+.coupon-card::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+}
+
+.coupon-header {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+  padding: 12px;
+  text-align: center;
+}
+
+.coupon-badge {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.coupon-body {
+  padding: 20px;
+}
+
+.coupon-body h3 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.coupon-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.coupon-code-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #f5f5f5;
+  border: 2px dashed #667eea;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.coupon-code {
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #667eea;
+  letter-spacing: 2px;
+}
+
+.copy-btn {
+  background: #667eea;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy-btn:hover {
+  background: #5a6fd6;
+  transform: scale(1.05);
+}
+
+.coupon-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.coupon-min {
+  color: #ff6b6b;
+  font-weight: 500;
+}
+
+.coupon-expiry {
+  color: #27ae60;
+}
+
+.home-footer {
+  background: linear-gradient(135deg, #1a237e 0%, #0d1442 100%);
+  color: #fff;
+  padding: 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.footer-section h3 {
+  color: #ffd700;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.footer-section p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.footer-address {
+  font-style: normal;
+}
+
+.footer-landmark {
+  margin-top: 1rem;
+  color: #ffd700 !important;
+}
+
+.footer-map-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.footer-map-link:hover {
+  background: linear-gradient(135deg, #34a853, #4285f4);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(66, 133, 244, 0.4);
+}
+
+.footer-phone {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-phone:hover {
+  color: #ffd700;
+}
+
+.footer-section strong {
+  color: #fff;
+}
+
+.footer-social {
+  margin-top: 1rem;
+}
+
+.footer-social span {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.social-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-logo {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+}

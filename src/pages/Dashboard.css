@@ -1,0 +1,303 @@
+.dashboard-container {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding: 100px 2rem 2rem;
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  color: #1a237e;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-header p {
+  color: #666;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.dashboard-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.card-header h3 {
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.card-icon {
+  color: #1a237e;
+  font-size: 1.5rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.info-row svg {
+  color: #1a237e;
+  min-width: 20px;
+}
+
+.role-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.role-badge.admin {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.role-badge.customer {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.welcome-card {
+  background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+  color: #fff;
+}
+
+.welcome-content {
+  text-align: center;
+  padding: 1rem;
+}
+
+.welcome-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-content p {
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.feature-item {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.quick-actions {
+  grid-column: span 2;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background: #1a237e;
+  color: #fff;
+}
+
+/* Coupons Card */
+.coupons-card {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+  border: 2px solid #ffc107;
+}
+
+.coupon-icon {
+  color: #ff6b6b !important;
+}
+
+.dashboard-coupons-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.dashboard-coupon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  border: 2px dashed #667eea;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.dashboard-coupon-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.25);
+}
+
+.coupon-left {
+  margin-bottom: 12px;
+}
+
+.coupon-value-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.coupon-center {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.coupon-code-display {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #667eea;
+  letter-spacing: 1px;
+}
+
+.coupon-name {
+  font-size: 0.85rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.coupon-condition {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.coupon-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.copy-coupon-btn {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.copy-coupon-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.4);
+}
+
+.coupon-expiry {
+  font-size: 0.7rem;
+  color: #27ae60;
+  font-weight: 500;
+}
+
+.view-all-coupons {
+  display: block;
+  text-align: center;
+  margin-top: 16px;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.view-all-coupons:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .quick-actions,
+  .coupons-card {
+    grid-column: span 1;
+  }
+
+  .dashboard-coupon-item {
+    flex-wrap: wrap;
+  }
+
+  .coupon-right {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+}

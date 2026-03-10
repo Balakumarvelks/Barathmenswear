@@ -1,0 +1,512 @@
+/* Invoice Page Styles - Matching Barath Mens Wear Bill Format */
+
+.invoice-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+.invoice-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.print-btn {
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s;
+}
+
+.print-btn:hover {
+  background: #1976d2;
+}
+
+.email-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s;
+}
+
+.email-btn:hover {
+  background: #388e3c;
+}
+
+.email-btn:disabled {
+  background: #9e9e9e;
+  cursor: not-allowed;
+}
+
+.back-btn {
+  background: #757575;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: #616161;
+}
+
+.invoice-container {
+  background: white;
+  border: 2px solid #1a237e;
+  border-radius: 8px;
+  padding: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Invoice Header */
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  border-bottom: 2px solid #1a237e;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 120px;
+}
+
+.header-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header-right {
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  min-width: 120px;
+}
+
+.header-right p {
+  margin: 2px 0;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.gstin {
+  font-size: 12px;
+  font-weight: bold;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+.company-logo {
+  margin-bottom: 0;
+}
+
+.logo-image {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.company-name {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1a237e;
+  margin: 10px 0 8px 0;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.company-address {
+  font-size: 13px;
+  text-align: center;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Bill Info */
+.bill-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #1a237e;
+  background: #fafafa;
+}
+
+.bill-number,
+.bill-date {
+  font-size: 14px;
+}
+
+.bill-number .label,
+.bill-date .label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.bill-number .value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a237e;
+}
+
+.bill-type {
+  flex: 1;
+  text-align: center;
+}
+
+.cash-bill {
+  background: #1a237e;
+  color: white;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Customer Info */
+.customer-info {
+  padding: 15px 20px;
+  border-bottom: 1px solid #1a237e;
+  background: #fff;
+}
+
+.customer-info .label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.customer-info .value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px dotted #999;
+  padding-bottom: 2px;
+}
+
+.customer-address {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.customer-phone {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* Invoice Table */
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.invoice-table th {
+  background: #1a237e;
+  color: white;
+  padding: 10px 8px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #1a237e;
+}
+
+.invoice-table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+}
+
+.col-sno {
+  width: 50px;
+  text-align: center;
+}
+
+.col-particulars {
+  width: auto;
+  text-align: left;
+  padding-left: 15px !important;
+}
+
+.col-pcs {
+  width: 60px;
+  text-align: center;
+}
+
+.col-rate {
+  width: 80px;
+  text-align: right;
+  padding-right: 10px !important;
+}
+
+.col-amount {
+  width: 100px;
+  text-align: right;
+  padding-right: 10px !important;
+}
+
+.variant-info {
+  font-size: 11px;
+  color: #666;
+  font-style: italic;
+}
+
+.empty-row td {
+  height: 28px;
+}
+
+.discount-row td {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.shipping-row td {
+  color: #555;
+}
+
+.tax-row td {
+  background: #f5f5f5;
+}
+
+.tax-label {
+  font-weight: bold;
+  color: #1a237e;
+}
+
+.total-row {
+  background: #e3f2fd;
+}
+
+.total-row td {
+  border-top: 2px solid #1a237e;
+  font-weight: bold;
+}
+
+.total-label {
+  font-size: 15px;
+  color: #1a237e;
+}
+
+.total-value {
+  font-size: 16px;
+  color: #1a237e;
+}
+
+/* Invoice Footer */
+.invoice-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px;
+  border-top: 1px solid #1a237e;
+  min-height: 80px;
+}
+
+.eoe {
+  font-weight: bold;
+  font-size: 12px;
+  color: #333;
+}
+
+.signature {
+  text-align: center;
+}
+
+.signature p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.signature-line {
+  width: 150px;
+  height: 40px;
+  border-bottom: 1px solid #333;
+  margin: 0 auto;
+}
+
+.auth-signatory {
+  font-size: 11px;
+  color: #666;
+  margin-top: 5px !important;
+}
+
+/* Payment Details */
+.payment-details {
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-details p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.payment-status {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.payment-status.paid {
+  background: #c8e6c9;
+  color: #2e7d32;
+}
+
+.payment-status.pending {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.payment-status.failed {
+  background: #ffcdd2;
+  color: #c62828;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .invoice-page {
+    background: white;
+    padding: 0;
+    margin: 0;
+  }
+
+  .invoice-container {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+
+  .invoice-header {
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .invoice-table th {
+    background: #1a237e !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cash-bill {
+    background: #1a237e !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .total-row {
+    background: #e3f2fd !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .tax-row td {
+    background: #f5f5f5 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .invoice-page {
+    padding: 10px;
+  }
+
+  .invoice-actions {
+    flex-direction: column;
+  }
+
+  .invoice-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .gstin {
+    align-self: center;
+  }
+
+  .bill-info {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .company-name {
+    font-size: 18px;
+  }
+
+  .invoice-table {
+    font-size: 11px;
+  }
+
+  .invoice-table th,
+  .invoice-table td {
+    padding: 5px 3px;
+  }
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #666;
+}
